@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Decisões</title>
+    <meta name="description" content="Analisador de Decisões by Pedro Paulo Rosemberg da Silva Oliveira">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta author="Pedro Paulo Rosemberg da Silva Oliveira - pedro@codever.com.br - All rights reserved">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="console">
+        <div id="output"></div>
+        <div id="input-line">
+            <span class="prompt">$</span>
+            <input type="text" id="input" autofocus>
+        </div>
+    </div>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+        <div id="progress-text">0 / 0 perguntas respondidas</div>
+    </div>
+    <div id="log-container">
+        <h3>Log da Aplicação</h3>
+        <div id="log"></div>
+    </div>
+    <div id="results" style="display: none;">
+        <h2>Resultados da Análise de Decisão</h2>
+        <div id="decision-matrix"></div>
+        <div id="decision-tree"></div>
+        <div id="decision-algorithm"></div>
+        <div id="best-alternative"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

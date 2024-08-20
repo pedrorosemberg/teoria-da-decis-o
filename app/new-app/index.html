@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Decisões</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 flex flex-col min-h-screen">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md flex-grow">
+        <h1 class="text-3xl font-bold mb-4 text-gray-800">Analisador de Decisões</h1>
+        <p class="mb-6 text-gray-600">Este programa usa a terminologia do livro 'An Introduction to Decision Theory' de Martin Peterson.</p>
+
+        <div id="inputSection" class="mb-8">
+            <button id="startButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                Iniciar Análise
+            </button>
+            <input type="file" id="loadFile" class="hidden">
+        </div>
+
+        <div id="outputSection" class="hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-700">Resultados da Análise</h2>
+            <div class="w-full bg-gray-200 rounded-full h-6 mb-4">
+                <div id="progressBar" class="bg-blue-600 h-6 rounded-full text-center text-xs text-white leading-6"></div>
+            </div>
+            <div id="decisionMatrix" class="mb-6 overflow-x-auto"></div>
+            <div id="decisionTree" class="mb-6 h-96 border border-gray-300 rounded"></div>
+            <canvas id="decisionAlgorithm" class="mb-6"></canvas>
+            <div id="bestAlternative" class="mb-6 text-lg font-semibold text-green-600"></div>
+            <button id="saveButton" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                Salvar Dados
+            </button>
+        </div>
+    </div>
+
+    <footer class="mt-8 text-center text-sm text-gray-600">
+        <p class="mb-2 italic">
+            <strong>AVISO: </strong>Essa aplicação é um projeto pessoal, como Aluno Especial, para estudo da disciplina de <strong>Teoria da Decisão</strong> do <strong>Programa de Pós-Graduação <i>Strictu Sensu</i> de Mestrado em Administração</strong> do <strong>CEFET-MG</strong>.
+        </p>
+        <p>&copy;2024 <a href="https://github.com/pedrorosemberg" class="font-bold">PEDRO ROSEMBERG</a> - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

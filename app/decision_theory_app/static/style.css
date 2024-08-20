@@ -1,0 +1,91 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0C0C0C;
+    color: #CCCCCC;
+    margin: 0;
+    padding: 20px;
+}
+
+#console {
+    background-color: #0C0C0C;
+    border: 1px solid #444444;
+    padding: 10px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: #0C0;
+    margin-right: 5px;
+}
+
+#input {
+    background-color: transparent;
+    border: none;
+    color: #CCCCCC;
+    font-family: inherit;
+    font-size: inherit;
+    flex-grow: 1;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#results img {
+    max-width: 100%;
+    height: auto;
+}
+
+#progress-container {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ddd;
+}
+
+#progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+#progress-text {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#log-container {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    height: 150px;
+    overflow-y: auto;
+}
+
+#log {
+    font-family: monospace;
+}
+
+.log-entry {
+    margin: 5px 0;
+}
+
+.log-error {
+    color: red;
+}
+
+.log-success {
+    color: blue;
+}
